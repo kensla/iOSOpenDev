@@ -1,5 +1,6 @@
 #How to install iOSOpenDev manually?
 
+OS X 10.10+ & Xcode 7+
 
 1. **Dependency**
 
