@@ -31,7 +31,7 @@
 
  * copy the folder **templates** into *$iOSOpenDevPath*
  
-   this version of **templates** is refined by the official one: the *ShellScript* of *BuildPhases* in **TemplateInfo.plist** is changed to `$iOSOpenDevPath/bin/iosod --xcbp`. and the *[$iOSOpenDevPath]* here is not that of *.zshrc*, it is a user defined key in **Base.xctemplate** and **Empty Project.xctemplate**.
+   this version of **templates** is refined by the original one: the *ShellScript* of *BuildPhases* in **TemplateInfo.plist** is changed to `$iOSOpenDevPath/bin/iosod --xcbp`. and the *[$iOSOpenDevPath]* here is not that in *.zshrc*, it is a user defined key in **Base.xctemplate** and **Empty Project.xctemplate**.
 
  3.3. setup **Xcode**
 
@@ -45,17 +45,17 @@
 	
  3.4. setup **SDK**
  
- * add the following key/value into **[SDK_PATH]/SDKSettings.plist**:
+ * modify the following key/value in **[SDK_PATH]/SDKSettings.plist**:
 
             DefaultProperties.CODE_SIGNING_REQUIRED => NO
             DefaultProperties.ENTITLEMENTS_REQUIRED => NO
             DefaultProperties.AD_HOC_CODE_SIGNING_ALLOWED => YES
             
- * in Xcode 7.3, the private framework has been removed from iOS 9.3 SDK, so maybe you want to use iOS 9.2 SDK. once you copy iOS 9.2 SDK into *[PLATFORM_PATH]/Developer/SDKs*, you should also modify **[PLATFORM_PATH]/Info.plist** as following, or else Xcode 7.3 can not recognize iOS 9.2 SDK in build settings:
+ * in Xcode 7.3, the private framework has been removed from iOS 9.3 SDK, so maybe you want to use iOS 9.2 SDK. once you copy iOS 9.2 SDK into *[PLATFORM_PATH]/Developer/SDKs*, you should also modify **[PLATFORM_PATH]/Info.plist** as following, or else Xcode 7.3 can not recognize iOS 9.2 SDK in project build settings:
 
              MinimumSDKVersion => 9.2
 
  3.5. setup **templates**
  
  * `ln -fhs $iOSOpenDevPath/templates ~/Library/Developer/Xcode/Templates/iOSOpenDev`
- * open **TemplateInfo.plist** of **Base.xctemplate** and **Empty Project.xctemplate** with Xcode, then set the value of the user defined key *[iOSOpenDevPath]* to *path/to/iOSOpenDev*.
+ * open **TemplateInfo.plist** in **Base.xctemplate** and **Empty Project.xctemplate** with Xcode, then set the value of the user defined key *[iOSOpenDevPath]* to *path/to/iOSOpenDev*.
