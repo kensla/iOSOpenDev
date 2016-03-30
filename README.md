@@ -36,7 +36,7 @@ OS X 10.10+ & Xcode 7+
 
  * copy the **.xcspec** files into */Applications/Xcode/Content/Developer/Platforms/[PLATFORM_PATH]/Developer/Library/Xcode/Specifications* (mkdir if not existed)
     
- * mkdir */Applications/Xcode/Content/Developer/Platforms/[PLATFORM_PATH]/Developer/usr/bin*
+ * `mkdir -p /Applications/Xcode/Content/Developer/Platforms/[PLATFORM_PATH]/Developer/usr/bin`
 	
  * `ln -fhs $iOSOpenDevPath/bin/iosod /Applications/Xcode/Content/Developer/Platforms/[PLATFORM_PATH]/Developer/usr/bin`
 	
