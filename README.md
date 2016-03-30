@@ -2,7 +2,6 @@
 
 ###OS X 10.10+ & Xcode 7+
 
------
 
 1. **Dependency**
 
